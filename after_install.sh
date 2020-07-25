@@ -76,3 +76,6 @@ cd $DIR
 cd ..
 rm -r $DIR
 rm jetbrains-toolbox.tar.gz
+
+# Install rustup - Rust Toolchain and installer
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
