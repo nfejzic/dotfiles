@@ -44,6 +44,15 @@ sudo dnf install emacs -y
 # configure emacs
 
     # install doom emacs
+    git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+    ~/.emacs.d/bin/domm install
+
+        # copy custom doom emacs config
+        rm ~/.doom.d/*
+        cp ~/dotfiles/emacs_config/.doom.d/* ~/.doom.d/
+
+        # perform doom sync
+        ~/.emacs.d/bin/doom sync
 
 
 # install nvim
@@ -52,3 +61,8 @@ sudo dnf install neovim -y
 # install Adobe source Code Pro fonts
 sudo dnf install adobe-source-code-pro-fonts -y # should be already there on fedora!
 
+# install jetbrains Mono font
+sudo dnf install jetrains-mono-fonts-all -y
+
+# install xclip
+sudo dnf install xclip -y
