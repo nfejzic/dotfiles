@@ -79,3 +79,24 @@ rm jetbrains-toolbox.tar.gz
 
 # Install rustup - Rust Toolchain and installer
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install latest openJDK
+sudo dnf install java-latest-openjdk -y
+
+# Install Podman-Docker -- open source docker alternative from red hat / fedora
+sudo dnf install podman-docker -y
+
+# Add flathub as flatpak repository
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Install spotify using flatpak
+flatpak install flathub spotify -y
+
+# install dropbox
+flatpak install flathub drobpox -y
+
+# install rclone and configure (for onedrive)
+sudo dnf install rclone -y
+
+# or install onedrive client on fedora
+sudo dnf install onedrive -y
