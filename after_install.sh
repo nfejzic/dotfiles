@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# enable fastest mirrors!
+sudo dnf config-manager --setopt=fastestmirror=True --save
+sudo dnf makecache --refresh 
+
 # install zsh
 sudo dnf install zsh -y
 
@@ -100,3 +104,9 @@ sudo dnf install rclone -y
 
 # or install onedrive client on fedora
 sudo dnf install onedrive -y
+
+# install make
+sudo dnf install make -y
+
+# install c and c++ compilers etc
+sudo dnf groupinstall 'Development Tools' -y
